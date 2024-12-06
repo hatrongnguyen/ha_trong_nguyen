@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/code/python/MSE/MLOps/prj_mlops_htn/mlruns/536343250310809735/d19ae08d3ff8457e985fc5ad369ea30e/artifacts
+end_time: 1733429133366
+entry_point_name: ''
+experiment_id: '536343250310809735'
+lifecycle_stage: active
+run_id: d19ae08d3ff8457e985fc5ad369ea30e
+run_name: receptive-mule-636
+run_uuid: d19ae08d3ff8457e985fc5ad369ea30e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733429120579
+status: 3
+tags: []
+user_id: Laptop cua Nguyen

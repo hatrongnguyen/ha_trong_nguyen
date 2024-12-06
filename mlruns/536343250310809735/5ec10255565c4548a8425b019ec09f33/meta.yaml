@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/code/python/MSE/MLOps/prj_mlops_htn/mlruns/536343250310809735/5ec10255565c4548a8425b019ec09f33/artifacts
+end_time: 1733429739102
+entry_point_name: ''
+experiment_id: '536343250310809735'
+lifecycle_stage: active
+run_id: 5ec10255565c4548a8425b019ec09f33
+run_name: mercurial-hen-655
+run_uuid: 5ec10255565c4548a8425b019ec09f33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733429726496
+status: 3
+tags: []
+user_id: Laptop cua Nguyen

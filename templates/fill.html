@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khả năng mua hàng trong tháng tiếp theo</title>
+</head>
+<body>
+    <h2>Nhập thông tin để dự đoán khả năng mua hàng trong tháng tiếp theo</h2>
+    <form action="/predict/" method="POST">
+        <label for="age">Độ tuổi:</label><br>
+        <input type="text" id="age" name="age" required><br><br>
+
+        <label for="income">Thu nhập:</label><br>
+        <input type="text" id="income" name="income" required><br><br>
+
+        <label for="spending_score">Điểm chi tiêu:</label><br>
+        <input type="text" id="spending_score" name="spending_score" required><br><br>
+
+        <label for="previous_purchases">Số lần mua hàng trước đó:</label><br>
+        <input type="text" id="previous_purchases" name="previous_purchases" required><br><br>
+
+        <label for="days_since_last_purchase">Số ngày từ lần mua hàng gần nhất:</label><br>
+        <input type="text" id="days_since_last_purchase" name="days_since_last_purchase" required><br><br>
+
+        <input type="submit" value="Dự đoán">
+    </form>
+</body>
+</html>
