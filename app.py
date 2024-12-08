@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify, render_template
 import mlflow
 import mlflow.sklearn
+from pathlib import Path
+import traceback
+import joblib
 
 # Tạo ứng dụng Flask
 app = Flask(__name__)
-
 # Route trang chủ, trả về form để nhập dữ liệu
 @app.route('/')
 def home():     
@@ -23,10 +25,13 @@ def predict():
 
         # Dữ liệu đầu vào cho mô hình
         input_data = [[age, income, spending_score, previous_purchases, days_since_last_purchase]]
-
+        
         # Load mô hình đã được lưu từ MLflow
-        model_uri = "file:///D:/code/python/MSE/MLOps/prj_mlops_htn/mlruns/536343250310809735/c5a030e03b744d578a75464ae8914923/artifacts/best_model"  # Cập nhật với URI đúng
-        model = mlflow.sklearn.load_model(model_uri)
+        root_path = Path(__file__).parent
+        model_uri = root_path / "models" / "model.pkl"
+        # model_uri = "file:///D:/code/python/MSE/MLOps/prj_mlops_htn/mlruns/536343250310809735/600c82e0110141b3a118c5de30df41e3/artifacts/best_model"  # Cập nhật với URI đúng
+        # model = mlflow.sklearn.load_model(model_uri)
+        model = joblib.load(model_uri)
         
         # Dự đoán
         submit = model.predict(input_data).tolist()
@@ -36,6 +41,7 @@ def predict():
     
     except Exception as e:
         print(e)
+        print(traceback.format_exc())
         return jsonify({"error": str(e)}), 400
 
 if __name__ == "__main__":
